@@ -2,7 +2,7 @@ services:
   ### Web Server Container
   web:
     image: lobsterk/web-nginx-php
-    container_name: webT
+    container_name: web-financeM
     restart: always
     ports:
       - "8179:80"
@@ -16,12 +16,12 @@ services:
   ## MySQL Container
   mysql:
     image: mysql:8.0
-    container_name: mysqlT
+    container_name: mysqlfinanceM
     restart: always
     ports:
       - "3301:3306"  # Исправлено на 3306, так как MySQL по умолчанию использует этот порт.
     environment:
-      MYSQL_DATABASE: dbtestT
+      MYSQL_DATABASE: dbtest
       MYSQL_USER: user
       MYSQL_PASSWORD: 1234
       MYSQL_ROOT_PASSWORD: r1234
@@ -29,7 +29,7 @@ services:
   ## Adminer container
   adminer:
     image: adminer
-    container_name: adminerT
+    container_name: adminerfinanceM
     depends_on:
       - mysql  # Зависимость от mysql сервиса
     ports:

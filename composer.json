@@ -1,0 +1,12 @@
+{
+    "name": "stick231/finance-magazine",
+    "description": "Проект финансовый блокнот",
+    "require": {
+        "vlucas/phpdotenv": "^5.4",
+        "phroute/phroute": "^2.2"
+    },
+    "autoload": {
+        "psr-4": {
+        }
+    }
+}
